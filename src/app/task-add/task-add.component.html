@@ -1,19 +1,23 @@
 <div class="container">
-    <h2>Add New Task</h2>
-    <form (ngSubmit)="addTask()" class="needs-validation" novalidate>
+  <h2>Add New Task</h2>
+  <form (ngSubmit)="addTask()" class="needs-validation" novalidate>
       <div class="form-group mb-3">
         <label for="title" class="form-label">Title</label>
         <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newTask.title" required>
       </div>
+
       <div class="form-group mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea class="form-control" id="description" name="description" [(ngModel)]="newTask.description" required></textarea>
       </div>
+
       <div class="form-group mb-3">
         <label for="deadline" class="form-label">Deadline</label>
         <input type="date" class="form-control" id="deadline" name="deadline" [(ngModel)]="newTask.deadline" required>
       </div>
+
+      <div id="error-message" style="color: red;"></div>
+
       <button type="submit" class="btn btn-primary">Add Task</button>
-      
-    </form>
+  </form>
 </div>
